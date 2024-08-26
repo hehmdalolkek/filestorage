@@ -1,5 +1,6 @@
 package ru.hehmdalolkek.filestorage.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -17,6 +18,7 @@ public class User implements Serializable {
     private String name;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Event> events = new ArrayList<>();
 
     public User() {
