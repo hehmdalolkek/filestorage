@@ -26,14 +26,15 @@ REST API that interacts with file storage and provides the ability to access fil
 
 1. You must have Tomcat 10 or later on your PC to run the app.
 2. To build the project you need to have Maven.
-3. To build the project, enter the command in the root of the project:
+3. Start locally MySQL database with dbname="filestorage", username="root", password="".
+4. To build the project, enter the command in the root of the project:
 ```
     mvn package 
 ```
-4. Move the collected filestorage.war from /target to /tomcat/webapps.
-5. Run the Tomcat script:
+5. Move the collected filestorage.war from /target to /tomcat/webapps.
+6. Run the Tomcat script:
 ```
     /bin/startup.bat // for windows
     /bin/startup.sh // for linux
 ```
-6. After starting Tomcat the application will be available at http://localhost:8080/filestorage
+7. After starting Tomcat the application will be available at http://localhost:8080/filestorage
